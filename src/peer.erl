@@ -25,7 +25,7 @@
 -module(peer).
 
 -include_lib("diameter/include/diameter.hrl").
--include_lib("diameter/include/diameter_gen_base_rfc3588.hrl").
+-include_lib("diameter/include/diameter_gen_base_accounting.hrl").
 
 -export([start/2,
          listen/2,
