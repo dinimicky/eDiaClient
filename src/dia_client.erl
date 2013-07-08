@@ -138,7 +138,7 @@ code_change(_OldVsn, State, _Extra) ->
 create_acr_process(Addr, Port, RT, CallRate)->
 	T1 = erlang:now(),
 	client:connect({tcp, Addr, Port}),
-	send_acr(RT, 1, CallRate),
+ 	send_acr(RT, 1, CallRate),
 	io:format("spend ~p msec ~n", [timer:now_diff(erlang:now(), T1)/1000]),
 	ok.
 
@@ -152,3 +152,4 @@ send_acr(2, Init, End) ->
 	client:call(SId, 3, Init+1),
 	client:call(SId, 4, Init+2),
 	send_acr(2, Init+3, End).
+
